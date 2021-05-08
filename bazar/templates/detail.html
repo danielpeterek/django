@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Podrobnosti o zboží{% endblock %}
+
+{% block content %}
+
+
+    <h2>{{ tenisky.nazev }}</h2>
+    {% if tenisky.foto %}
+    <p><img src="{{ tenisky.foto.url }}" alt="{{ tenisky.nazev }}"></p>
+    {% else %}
+    <p><img src=" " alt="Foto není k dispozici"></p>
+    {% endif %}
+    <p>{{ tenisky.popis }}</p>
+    <p>Velikost: {{ tenisky.velikost }}</p>
+    <p>Nákupní cena: {{ tenisky.cena }} Kč</p>
+    <p>Přeprodejní cena: {{ tenisky.cena1 }} Kč</p>
+    <hr>
+    <p><a href="{% url 'tenisky-update' tenisky.pk %}" class="btn btn-primary">Editovat</a></p>
+    <p><a href="{% url 'tenisky-delete' tenisky.pk %}" class="btn btn-danger">Smazat</a></p>
+<hr>
+<p class="text-center"><a href="{% url 'list' %}" class="btn btn-primary">Zpět na seznam</a></p>
+{% endblock %}

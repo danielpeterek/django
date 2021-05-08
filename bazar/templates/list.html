@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Přehled zboží{% endblock %}
+
+{% block content %}
+    <p class="text-center"><a href="{% url 'index' %}" class="btn btn-primary">Zpět na hlavní stránku</a></p>
+    <hr>
+    {% for tenisky in tenisky_list %}
+    <h3><a href="{% url 'detail' tenisky.pk %}"> {{ tenisky.nazev }} </a></h3>
+    <p>Původní cena: {{ tenisky.cena }} Kč, Velikost: {{ tenisky.velikost }}</p>
+    <hr>
+    {% endfor %}
+    <p><a href="{% url 'tenisky-create' %}" class="btn btn-success">Nový produkt</a></p>
+
+
+{% endblock %}

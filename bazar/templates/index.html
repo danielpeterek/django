@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Web o teniskách{% endblock %}
+
+{% block content %}
+    <h2 class="text-center">{{ nadpis }}</h2>
+    <p class="text-center w-75">Vítejte na webu o teniskách! <img class="w-25" src="../static/img/logo.png" alt=""></p>
+<p>Welcome to SneakerNews' complete calendar for new and upcoming sneaker releases from some of the most popular brands, including: Jordan Brand, Nike, New Balance, adidas, Vans, Converse, ASICS and Reebok. Here, you'll find pricing and sizing information and portals to our "Where To Buy" lists and occasional exclusive product images. Some of our recommended online retailers include: Stadium Goods, Nikestore, New Balance, adidas, Foot Locker, SSENSE, and Finish Line. Follow @kicksfinder on Twitter to stay up to the minute on both popular and under-the-radar sneaker releases and restocks.</p>
+
+    <p class="text-center"><a href="{% url 'list' %}" class="btn btn-primary">Seznam tenisek</a></p>
+
+{% endblock %}

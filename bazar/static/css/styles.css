@@ -1,0 +1,17 @@
+header {
+    background-color: gray;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: yellow;
+    font-variant: small-caps;
+}
+
+footer {
+    padding: 35px;
+}
+
+h2 {
+    text-center;
+}
