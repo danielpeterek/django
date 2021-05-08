@@ -1,2 +1,1 @@
-# Framework Django
-## Příklad Bazar
+# Django
